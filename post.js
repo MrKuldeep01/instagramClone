@@ -156,6 +156,15 @@ function updateStories() {
     document.querySelector('.statusarea').appendChild(storyBox);
     });
 }
+let storyArea = document.querySelector(".statusarea");
+storyArea.addEventListener("click",(evt)=>{
+    let clutter=evt.target.tagName;
+    console.log(clutter);
+    if( clutter === "IMG"){
+        let statusPage  = document.createElement("div");
+        statusPage.classList.add("statuspage");
+    }    
+    })
 
 function updatePosts() {
   postData.forEach((obj) => {
